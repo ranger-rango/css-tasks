@@ -5,6 +5,7 @@ Complete the tasks testing different CSS Concepts
 
 ## Workflow
 1. Fork the repository 
+2. Complete the tasks sequencially
 
 ## Tasks
 
