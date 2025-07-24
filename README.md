@@ -1,12 +1,10 @@
-# CSS Course - Interactive Web Components
+# CSS Tasks
 
 ## Overview
-Build four interactive web components focusing on CSS styling and JavaScript functionality. Each task has two phases: CSS implementation and JavaScript enhancement.
-Setup
+Complete the tasks testing different CSS Concepts
 
 ## Workflow
 1. Fork the repository 
-2. Create branches for each phase: task-X-css and task-X-complete
 
 ## Tasks
 
