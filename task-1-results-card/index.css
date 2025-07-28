@@ -1,3 +1,153 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
 h1 {
     color: orange;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(231, 100%, 98%);
+}
+
+.root-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+section {
+    width: 25rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.percentage-card {
+    background: linear-gradient(to bottom, hsl(246, 100%, 67%), hsl(256, 72%, 46%));
+    border-radius: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+.percentage-card h2, p {
+    text-align: center;
+    font-weight: lighter;
+}
+
+.percentage-circle {
+    background: radial-gradient(
+        circle at bottom,
+        hsl(256, 72%, 46%, 0.6) 20%,
+        hsl(256, 72%, 46%) 60% 80%,
+        transparent 100%
+    );
+    /* background-color: hsl(256, 72%, 46%); */
+    padding: 1rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-card {
+    border-radius: 0 2rem 2rem 0;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.summary-card h2 {
+    text-align: left;
+}
+
+.test-summary-container {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.test-summary {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    border-radius: .5rem;
+
+}
+
+.test-summary div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.summary-card img {
+    width: 1rem;
+}
+
+#reaction-test {
+    background-color: hsl(0, 100%, 97%);
+    color: hsl(0, 100%, 67%);
+}
+
+#memory-test {
+    background-color: hsl(39, 100%, 96%);
+    color: hsl(39, 100%, 56%);
+}
+
+#verbal-test {
+    background-color: hsl(166, 100%, 96%);
+    color: hsl(166, 100%, 40%);
+}
+
+#visual-test {
+    background-color: hsl(234, 85%, 96%);
+    color: hsl(234, 85%, 45%);
+}
+
+.test-score {
+    color: black;
+}
+
+.summary-card span {
+    color: gray;
+}
+
+.summary-card button {
+    height: 3rem;
+    width: 20rem;
+    border-radius: 3rem;
+    border: none;
+    /* background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsl(241, 72%, 46%)); */
+    background: linear-gradient(to bottom, hsl(246, 100%, 67%), hsl(256, 72%, 46%));
+
 }
