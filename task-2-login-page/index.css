@@ -1,3 +1,158 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
 h1 {
     color: orange;
 }
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.root-container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+}
+
+.side-bar {
+    grid: 1;
+    height: 100vh;
+    background-color: hsl(240, 2%, 96.5%);
+    padding: 1rem 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.side-bar img {
+    width: 7rem;
+}
+
+.bng-copyright {
+    background-color: white;
+    padding: 1rem;
+    width: 30vw;
+}
+
+.main-background {
+    grid: 2;
+    height: 100vh;
+    background-color: gray;
+    background-image: url('imgs/img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-form {
+    position: fixed;
+    top: 47.5%;
+    left: 17%;
+    transform: translateY(-50%);
+    height: 29.5rem;
+    width: 32rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    box-shadow: 0 0 .3rem 0 hsl(240, 2%, 90%);
+}
+
+
+
+.login-header {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    align-items: center;
+    width: inherit;
+    background-color: green;
+}
+
+svg {
+    grid: 1;
+    width: 4rem;
+    height: 100%;
+    fill: white;
+    background-color: black;
+}
+
+.login-header p {
+    grid: 2;
+    padding: 0 1rem;
+    height: 2rem;
+    line-height: 2rem;
+    color: white;
+}
+
+.login-form form {
+    width: 25rem;
+    height: 21.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    gap: 1rem;
+}
+
+.login-form legend {
+    padding: 0 0 2rem 0;
+}
+
+.input-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: .3rem 1rem;
+    width: inherit;
+}
+
+.login-form label {
+    padding-right: 1rem;
+}
+
+.login-form input {
+    background-color: wheat;
+    border: .05rem solid gray;
+    width: 17rem;
+    height: 1.7rem;
+    border-radius: .1rem;
+}
+
+.btn-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    width: inherit;
+}
+
+.btn-container button {
+    padding: .4rem;
+    border: none;
+    background-color: black;
+    border-radius: .2rem;
+    color: white;
+}
+
+.form-footer {
+    height: 4rem;
+    width: inherit;
+    background-color: hsl(240, 2%, 96.5%);
+}
+

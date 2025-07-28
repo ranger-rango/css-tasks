@@ -1,9 +1,54 @@
 <html lang="en">
-<head >
-    <title>Task 2 Log In Page</title>
-    <link href="index.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Task 2 Log In Page</h1>
-</body>
+    <head >
+        <title>Task 2 Log In Page</title>
+        <link href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- <h1>Task 2 Log In Page</h1> -->
+         <div class="root-container">
+            <aside class="side-bar">
+                <div class="bng-logo">
+                    <img src="imgs/bng-logo.png" alt="bng logo">
+                </div>
+
+                <div class="bng-copyright">
+                    &copy; All Rights Reserved
+                </div>
+            </aside>
+
+            <section class="main-background"></section>
+
+            <section class="login-form">
+                <div class="login-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"><path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/></svg>
+                    <p>User Login</p>
+                </div>
+
+                <form action="">
+                    <fieldset>
+                        <legend>Enter your username and password</legend>
+                        <div class="input-container">
+                            <label for="username">Username</label>
+                            <input type="text" name="usernmae" id="username">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="password">Password </label>
+                            <input type="text" name="password" id="password">
+                        </div>
+
+                    </fieldset>
+
+                    <div class="btn-container">
+                        <button>
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+
+                <div class="form-footer">
+                </div>
+            </section>
+         </div>
+    </body>
 </html>
