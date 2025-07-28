@@ -1,3 +1,161 @@
-h1 {
-    color: orange;
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(199, 81%, 94%);
+    color: hsl(201, 54%, 16%);
 }
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.root-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70rem;
+    height: fit-content;
+    background-color: white;
+    border-radius: 3rem;
+}
+
+.mortgage-information {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 3rem 0 0 3rem;
+    width: 35rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: inherit;
+}
+
+.header-container h2, a {
+    background-color: inherit;
+}
+
+.mortgage-information form {
+    background-color: white;
+}
+
+.mortgage-information fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.mortgage-information fieldset {
+    border: none;
+    width: 15rem;
+}
+
+.mortgage-information fieldset > div {
+    display: flex;
+    gap: 1em;
+    width: 100%;
+    background-color: white;
+    height: fit-content;
+}
+
+.mortgage-information fieldset > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    height: fit-content;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: .1rem solid rgb(14, 10, 10);
+    padding: .5rem 0;
+    height: 2.5rem;
+    border-radius: .2rem;
+    background-color: white;
+    width: 100%;
+}
+
+.input-container input {
+    height: 2rem;
+    background-color: white;
+    border: none;
+}
+
+.mortgage-information fieldset > div label {
+    background-color: white;
+}
+
+.input-tag {
+    padding: .5rem;
+}
+
+.radio-container {
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    gap: 1rem;
+    width: inherit;
+}
+
+.radio-container p {
+    background-color: white;
+}
+
+.radio-container div {
+    background-color: white;
+    border: .1rem solid gray;
+    border-radius: .2rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    font-weight: 600;
+    background-color: hsl(67, 75%, 60%);
+    border: none;
+    border-radius: 1rem;
+}
+
+button svg {
+    width: 1rem;
+    background-color: hsl(67, 75%, 60%);
+}
+
+.mortgage-results {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(201, 54%, 16%);
+    padding: 1.5rem;
+    border-radius: 0 3rem 3rem 6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.mortgage-results h2, .mortgage-results p {
+    background-color: hsl(201, 54%, 16%);
+    color: white;
+    text-align: center;
+}
+
