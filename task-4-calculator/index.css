@@ -24,11 +24,42 @@ section {
     padding: 1rem 0;
 }
 
+.theme-toggle-container {
+    width: 5rem;
+}
+
+.theme-toggle-container span {
+    padding: 0 1.2rem;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: inherit;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 1rem;
+    background-color: var(--calc-display);
+    border-radius: 4px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background: var(--equals);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .display-switcher-btn {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     color: var(--key-pad);
+    border: none;
+    padding: .2rem;
 }
 
 .display-switcher-btn:hover {
@@ -69,6 +100,8 @@ section {
 
     .theme-switcher {
         align-items: end;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     .calc-input {
@@ -154,6 +187,11 @@ section {
         align-items: center;
         color: var(--key-pad);
         padding: 1rem;
+    }
+
+    .theme-switcher {
+        display: inline-flex;
+        gap: 2rem;
     }
 
     .calc-input {
