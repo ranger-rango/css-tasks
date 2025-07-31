@@ -1,3 +1,168 @@
-h1 {
-    color: orange;
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    height: 7vh;
+    color: white;
+    line-height: 3.5vh;
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-evenly;
+    background-color: rgb(232, 232, 232);
+}
+
+nav p {
+    background-color: rgb(91, 88, 88);
+    padding: 0 .5rem;
+    border-radius: .3rem;
+}
+
+nav p:hover {
+    cursor: pointer;
+}
+
+
+.layouts {
+    height: 93vh;
+    width: 100vw;
+    background-color: white;
+    display: grid;
+    gap: .5rem;
+    align-content: center;
+    justify-items: center;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(255, 215, 6);
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: rgb(255, 215, 6);
+    width: 100%;
+    height: 100%;
+}
+
+.article {
+    grid-area: article;
+    background-color: rgb(255, 215, 6);
+    width: 100%;
+    height: 100%;
+}
+
+.ads {
+    grid-area: ads;
+    background-color: rgb(255, 215, 6);
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(255, 215, 6);
+    width: 100%;
+    height: 100%;
+}
+
+[data-theme="layout1"] {
+    .layouts {
+        grid-template-areas: 
+        "header header header"
+        "nav article ads"
+        "nav footer footer";
+        grid-template-columns: 300px 1fr 200px;
+        grid-template-rows: 5vh 1fr 5vh;
+    }
+}
+
+
+[data-theme="layout2"] {
+    .layouts {
+        grid-template-areas: 
+        "header header header"
+        "nav article ads"
+        "footer footer footer";
+        grid-template-columns: 300px 1fr 200px;
+        grid-template-rows: 5vh 1fr 5vh;
+    }
+}
+
+[data-theme="layout3"] {
+    .layouts {
+        grid-template-areas: 
+        "nav header"
+        "nav article"
+        "nav ads"
+        "nav footer";
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 5vh 1fr 5vh 5vh;
+    }
+
+    .header {
+        background-color: rgb(154, 206, 48);
+    }
+
+    .nav {
+        background-color: rgb(154, 206, 48);
+    }
+
+    .article {
+        background-color: rgb(154, 206, 48);
+    }
+
+    .ads {
+        background-color: rgb(154, 206, 48);
+    }
+
+    .footer {
+        background-color: rgb(154, 206, 48);
+    }
+}
+
+[data-theme="layout4"] {
+    .layouts {
+        grid-template-areas: 
+        "header header"
+        "ads article"
+        "nav article"
+        "nav footer";
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 5vh 10vh 1fr 5vh;
+    }
+
+    .header {
+        background-color: rgb(154, 206, 48);
+    }
+
+    .nav {
+        background-color: rgb(154, 206, 48);
+    }
+
+    .article {
+        background-color: rgb(154, 206, 48);
+    }
+
+    .ads {
+        background-color: rgb(154, 206, 48);
+    }
+
+    .footer {
+        background-color: rgb(154, 206, 48);
+    }
 }
