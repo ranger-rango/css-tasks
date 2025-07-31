@@ -28,6 +28,10 @@ section {
     width: 5rem;
 }
 
+.theme-toggle-container p {
+    padding: 0 0 1.3rem 1rem;
+}
+
 .theme-toggle-container span {
     padding: 0 1.2rem;
 }
@@ -51,6 +55,11 @@ input[type=range]::-webkit-slider-thumb {
     background: var(--equals);
     border-radius: 50%;
     cursor: pointer;
+}
+
+.calc-input input{
+    color: var(--key-pad);
+    text-align: right;
 }
 
 .display-switcher-btn {
@@ -99,9 +108,11 @@ input[type=range]::-webkit-slider-thumb {
     }
 
     .theme-switcher {
-        align-items: end;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        align-content: center;
+        justify-items: center;
+        padding: 0 0 0 5rem;
     }
 
     .calc-input {
@@ -128,6 +139,9 @@ input[type=range]::-webkit-slider-thumb {
         padding: 1rem;
         background-color: var(--key-pad-background);
         border-radius: .5rem;
+        align-content: center;
+        justify-items: center;
+
     }
 
     .calc-buttons button {
@@ -229,13 +243,13 @@ input[type=range]::-webkit-slider-thumb {
     }
 
     .input-button {
-        height: 3rem;
+        height: 5rem;
         width: 7rem;
         background-color: var(--key-pad);
     }
 
     .reset-button {
-        height: 3rem;
+        height: 5rem;
         width: 15rem;
         background-color: var(--reset-del);
         color: var(--key-pad);
@@ -247,12 +261,10 @@ input[type=range]::-webkit-slider-thumb {
     }
 
     .equals-button {
-        height: 3rem;
+        height: 5rem;
         width: 15rem;
         background-color: var(--equals);
     }
-
-
 
 }
 
