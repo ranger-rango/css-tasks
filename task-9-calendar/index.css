@@ -1,3 +1,120 @@
-h1 {
-    color: orange;
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9rem;
+    font-weight: 540;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(247, 249, 254);
+}
+
+.root-container {
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: .5rem;
+
+}
+
+.calendar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7rem;
+}
+
+.day-picker-container {
+    display: flex;
+}
+
+.day-picker {
+    border: .1rem solid rgb(209, 209, 209);
+    padding: .5rem 1rem;
+}
+
+.time-frame-picker-container {
+    display: flex;
+}
+
+.time-frame-picker {
+    border: .1rem solid rgb(209, 209, 209);
+    padding: .5rem 1rem;
+}
+
+.first {
+    border-radius: .3rem 0 0 .3rem;
+}
+
+.middle {
+    border-left: none;
+    border-right: none;
+}
+
+.last {
+    border-radius: 0 .3rem .3rem 0;
+}
+
+.picked {
+    background-color: rgb(230, 230, 230);
+}
+
+.calendar-days {
+    width: inherit;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(6.5rem, 7rem));
+    row-gap: 0;
+}
+
+.days-of-the-week {
+    color: rgb(132, 133, 136);
+}
+
+.calendar-dates {
+    border-top: 0 solid rgb(209, 209, 209);
+    border-right: .1rem solid rgb(209, 209, 209);
+    border-bottom: .1rem solid rgb(209, 209, 209);
+    border-left: 0 solid rgb(209, 209, 209);
+    padding: .3rem 1.5rem 1.5rem .3rem;
+    text-align: top;
+    margin: 0;
+}
+
+.bottom{
+    border-bottom: none;
+}
+
+.right {
+    border-right: none;
+}
+
+.grayed-dates {
+    background-color: rgb(247, 249, 254);
+}
+
+.crossed-dates {
+    color: rgb(132, 133, 136);
+    background: repeating-linear-gradient(
+    45deg,
+    rgb(247, 249, 254),
+    rgb(247, 249, 254) .1rem,
+    #ffffff .15rem,
+    #ffffff .3rem
+    );
+}
+
+.last-date {
+    color: rgb(132, 133, 136);
 }
