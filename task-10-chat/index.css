@@ -1,3 +1,554 @@
-h1 {
-    color: orange;
+* {
+    box-sizing: border-box;
 }
+
+html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(217, 223, 229);
+}
+
+.root-container {
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav"
+    "side-nav-bar messages main-nav"
+    "side-nav messages main";
+    grid-template-columns: 10rem 15rem 1fr;
+    grid-template-rows: 4rem 4rem 1fr;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+/* 150, 151, 164  */
+
+.nav-bar {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: .35rem .7rem;
+    border-bottom: .05rem solid rgb(150, 151, 164);
+}
+
+.co-banner {
+    width: 2.3rem;
+}
+
+.co-banner img {
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    padding: .3rem;
+    border: .05rem solid rgb(150, 151, 164);
+    border-radius: .3rem;
+}
+
+.search::placeholder {
+    color: rgb(150, 151, 164);
+}
+
+.search input {
+    border: none;
+    width: 20rem;
+    padding: .1rem .3rem;
+}
+
+.search input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-bar svg {
+    width: 1.5rem;
+}
+
+.nav-btns {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem 0 0;
+}
+
+.nav-btns button {
+    border: none;
+    padding: .1rem 1rem;
+    color: white;
+    background-color: rgb(33, 133, 255);
+    border-radius: .5rem;
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .2rem;
+}
+
+.nav-btns span {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+
+.side-nav-bar {
+    grid-area: side-nav-bar;
+    padding: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: .5rem;
+    gap: .3rem;
+    padding: 0 .7rem;
+    border-bottom: .05rem solid rgb(150, 151, 164);
+}
+
+.side-nav-bar img {
+    width: 1.3rem;
+}
+
+.side-nav {
+    grid-area: side-nav;
+}
+
+.side-nav img {
+    width: 1rem;
+}
+
+.side-nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .3rem;
+    padding: 0 .7rem;
+    color: rgb(150, 151, 164);
+    font-size: .8rem;
+}
+
+.messages-nav {
+    background-color: rgb(243, 250, 254);
+    color: rgb(36, 132, 254);
+}
+
+.messages {
+    grid-area: messages;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    border-left: .05rem solid rgb(150, 151, 164);
+    border-right: .05rem solid rgb(150, 151, 164);
+    padding: 1rem 0;
+}
+
+.messages svg {
+    width: 1.5rem;
+}
+
+.messages-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: .7rem;
+    width: 100%;
+}
+
+.messages-header h2 {
+    font-size: .9rem;
+    margin: 0;
+}
+
+.messages-header p {
+    color: rgb(150, 151, 164);
+    background-color: rgb(238, 243, 246);
+    font-size: .5rem;
+    padding: .2rem;
+    border-radius: .5rem;
+    margin: 0;
+}
+
+.message-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    padding: .3rem;
+    border: .05rem solid rgb(150, 151, 164);
+    border-radius: .3rem;
+    width: 90%;
+}
+
+.message-search input {
+    width: 90%;
+    border: none;
+}
+
+.message-search input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.message-category-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .3rem;
+    padding: .5rem;
+    border: .05rem solid rgb(150, 151, 164);
+    border-radius: .3rem;
+    width: 90%;
+    font-size: .7rem;
+}
+
+.message-category-selector p {
+    margin: 0;
+}
+
+.messages-preview-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: auto;
+}
+
+.message-preview-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: .05rem solid rgb(150, 151, 164);
+    border-bottom: .025rem solid rgb(150, 151, 164);
+}
+
+.selected-message {
+    background-color: rgb(243, 250, 254);
+}
+
+.msg-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .3rem .5rem;
+}
+
+.msg-header img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.msg-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-title h3 {
+    font-size: .7rem;
+    margin: 0;
+}
+
+.msg-title p {
+    font-size: .5rem;
+    margin: 0;
+}
+
+.msg-title span {
+    color: rgb(36, 132, 254);
+    font-weight: 500;
+}
+
+.msg-time-frame {
+    height: 100%;
+    padding: 0 .1rem;
+}
+
+.msg-time-frame p {
+    font-size: .5rem;
+    color: rgb(150, 151, 164);
+}
+
+.msg-preview-container {
+    width: 100%;
+    padding: 0 .3rem;
+}
+
+.msg-preview {
+    font-size: .7rem;
+    color: rgb(150, 151, 164);
+}
+
+.main-nav {
+    grid-area: main-nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: .05rem solid rgb(150, 151, 164);
+}
+
+.main-nav svg {
+    width: 1.5rem;
+}
+
+.applicant-full-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.applicant-full-name h3 {
+    font-size: .7rem;
+    margin: 0;
+}
+
+.applicant-full-name p {
+    font-size: .5rem;
+    margin: 0;
+}
+
+.applicant-full-name span {
+    color: rgb(36, 132, 254);
+    font-weight: 500;
+}
+
+.main-nav-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.main-nav-btns div {
+    border-radius: .2rem;
+}
+
+.view-profile {
+    border: none;
+    color: rgb(33, 133, 255);
+    background-color: rgb(243, 250, 254);
+    padding: .3rem;
+    border-radius: .2rem;
+    font-size: .7rem;
+}
+
+.application-filter {
+    display: flex;
+    padding: .3rem .5rem;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    border: .05rem solid rgb(150, 151, 164);
+}
+
+.application-filter p {
+    margin: 0;
+    font-size: .7rem;
+}
+
+.application-filter svg {
+    width: .7rem;
+}
+
+.like {
+    background-color: rgb(228, 251, 245);
+}
+
+.close {
+    border: .05rem solid rgb(150, 151, 164);
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 1fr 13vh;
+    align-content: center;
+    justify-items: center;
+    background-color: rgb(250, 253, 255);
+    padding: 1rem 0;
+    border-radius: 0 0 .5rem 0;
+}
+
+.message-area-container {
+    background-color: rgb(250, 253, 255);
+    width: 100%;
+}
+
+.message-area {
+    background-color: rgb(250, 253, 255);
+    width: 90%;
+}
+
+.full-message-container img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+}
+
+.date-time-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+}
+
+.date-time-container p {
+    margin: 0;
+    text-align: center;
+    padding: .3rem 1rem;
+    border: .05rem solid rgb(150, 151, 164);
+    border-radius: .3rem;
+    color: rgb(150, 151, 164);
+    font-size: .7rem;
+}
+
+.full-message-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: .3rem;
+}
+
+.full-message-container div {
+    width: 70%;
+    border: .05rem solid rgb(150, 151, 164);
+    padding: .5rem;
+    border-radius: .3rem;
+    background-color: white;
+}
+
+.right-f-msg {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.right-f-msg div {
+    background-color: rgb(234, 243, 255);
+    border: .1rem solid rgb(184, 213, 246);
+}
+
+.full-message-container p {
+    margin: 0;
+    font-size: .75rem;
+    line-height: 1rem;
+    padding: .3rem 0;
+}
+
+.message-timelapse {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: .3rem;
+}
+
+.message-timelapse p {
+    margin: 0;
+    text-align: center;
+    padding: .3rem 3rem;
+    border-radius: .3rem;
+    color: rgb(150, 151, 164);
+    font-size: .7rem;
+}
+
+.right-timelapse {
+    flex-direction: row-reverse;
+}
+
+.chat-input {
+    background-color: rgb(250, 253, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-box {
+    border: .05rem solid rgb(150, 151, 164);
+    width: 90%;
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .3rem;
+    background-color: white;
+}
+
+.chat-input svg {
+    width: 1rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: .3rem;
+    border: none;
+}
+
+.input-box input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.input-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .3rem;
+}
+
+.char-custom {
+    gap: .3rem;
+}
+
+.input-right-btns {
+    display: flex;
+    gap: .5rem;
+}
+
+.input-right-btns div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+    color: white;
+    background-color: rgb(33, 133, 255);
+    padding: .3rem;
+    border-radius: .2rem;
+}
+
+.input-right-btns button {
+    font-size: .7rem;
+    border: none;
+    color: white;
+    background-color: rgb(33, 133, 255);
+}
+
+.input-right-btns div > svg {
+    fill: white;
+}
+
+
+
+
+
